@@ -2,6 +2,8 @@
 
 A responsive luxury-skincare ecommerce concept built as a portfolio demonstration. The brand, products, pricing, and testimonials are fictional.
 
+> Portfolio concept only: checkout and product purchases are intentionally simulated.
+
 ## Features
 
 - Editorial storefront with responsive campaign storytelling
