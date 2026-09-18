@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Create or access your BENTHEG customer account." />
+    <meta name="theme-color" content="#160608" />
+    <title>BENTHEG Account</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23160608'/%3E%3Cpath d='M18 13h17c10 0 16 5 16 13 0 5-3 9-8 11 6 2 9 6 9 12 0 9-7 14-18 14H18V13Zm11 9v11h6c4 0 6-2 6-6s-2-5-6-5h-6Zm0 20v12h7c4 0 7-2 7-6s-3-6-7-6h-7Z' fill='%23f3eadf'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./auth.css" />
+    <script type="module" src="./auth.js"></script>
+  </head>
+  <body>
+    <main class="auth-shell">
+      <section class="auth-visual" aria-label="BENTHEG skincare campaign">
+        <img src="./assets/model-portrait.png" alt="BENTHEG campaign model" />
+        <div class="visual-shade"></div>
+        <header class="auth-brand">
+          <a href="./index.html" aria-label="Return to BENTHEG storefront">BENTHEG</a>
+          <span>Member account</span>
+        </header>
+        <div class="visual-copy">
+          <p>Your ritual, remembered</p>
+          <h1>Your skin.<br /><em>Considered.</em></h1>
+          <div class="visual-points">
+            <span>Save your ritual</span>
+            <span>Follow every order</span>
+            <span>Return with ease</span>
+          </div>
+        </div>
+        <p class="visual-caption">Partner access · Philippines</p>
+      </section>
+
+      <section class="auth-panel">
+        <div class="mobile-brand"><a href="./index.html">BENTHEG</a><span>Account</span></div>
+        <a class="back-link" href="./index.html" aria-label="Back to storefront"><span aria-hidden="true">←</span> Storefront</a>
+
+        <div class="auth-card" data-auth-forms>
+          <div class="auth-intro">
+            <p class="eyebrow">Member access</p>
+            <h2 data-title>Welcome back.</h2>
+            <p data-subtitle>Sign in to revisit your ritual and order history.</p>
+          </div>
+
+          <div class="auth-switch" role="tablist" aria-label="Account access">
+            <button type="button" role="tab" aria-selected="true" aria-controls="login-form" data-mode="login">Log in</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="register-form" data-mode="register">Register</button>
+            <span aria-hidden="true"></span>
+          </div>
+
+          <form class="auth-form active" id="login-form" data-form="login" novalidate>
+            <label class="field">
+              <span>Email address</span>
+              <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required />
+              <small>Please enter a valid email address.</small>
+            </label>
+            <label class="field password-field">
+              <span>Password</span>
+              <input type="password" name="password" autocomplete="current-password" placeholder="Your password" minlength="8" required />
+              <button type="button" data-password-toggle aria-label="Show password">Show</button>
+              <small>Password must contain at least 8 characters.</small>
+            </label>
+            <div class="form-options">
+              <label class="check"><input type="checkbox" name="remember" /><span>Keep me signed in</span></label>
+              <button class="quiet-button" type="button" data-password-reset>Forgot password?</button>
+            </div>
+            <button class="primary-button" type="submit"><span>Sign in</span><b aria-hidden="true">↗</b></button>
+            <p class="form-note">Secure account access powered by Firebase.</p>
+          </form>
+
+          <form class="auth-form" id="register-form" data-form="register" hidden novalidate>
+            <div class="field-row">
+              <label class="field"><span>First name</span><input type="text" name="firstName" autocomplete="given-name" placeholder="First name" required /><small>Required field.</small></label>
+              <label class="field"><span>Last name</span><input type="text" name="lastName" autocomplete="family-name" placeholder="Last name" required /><small>Required field.</small></label>
+            </div>
+            <label class="field"><span>Email address</span><input type="email" name="email" autocomplete="email" placeholder="you@example.com" required /><small>Please enter a valid email address.</small></label>
+            <label class="field password-field">
+              <span>Create password</span>
+              <input type="password" name="password" autocomplete="new-password" placeholder="At least 8 characters" minlength="8" required />
+              <button type="button" data-password-toggle aria-label="Show password">Show</button>
+              <small>Password must contain at least 8 characters.</small>
+            </label>
+            <label class="check terms"><input type="checkbox" name="terms" required /><span>I agree to the store terms and privacy notice.</span></label>
+            <button class="primary-button" type="submit"><span>Create account</span><b aria-hidden="true">↗</b></button>
+            <p class="form-note">Your password is handled securely by Firebase Authentication.</p>
+          </form>
+        </div>
+
+        <div class="account-card" data-account-card hidden>
+          <p class="eyebrow">Signed in</p>
+          <h2>Your ritual is ready.</h2>
+          <p>You are signed in as <strong data-account-email></strong>.</p>
+          <div class="account-actions">
+            <a class="primary-button" href="./index.html"><span>Return to the collection</span><b aria-hidden="true">↗</b></a>
+            <button class="quiet-button" type="button" data-sign-out>Sign out</button>
+          </div>
+        </div>
+
+        <footer class="auth-footer"><span>© 2026 BENTHEG</span><span>Secure member account</span></footer>
+      </section>
+    </main>
+
+    <div class="auth-toast" role="status" aria-live="polite" data-toast></div>
+  </body>
+</html>
